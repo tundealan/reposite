@@ -1,0 +1,133 @@
+@media(max-width:768px){
+    .navigation >div {
+        margin: 20px 5px;
+    }
+
+    .navigation{
+        position: relative;
+        min-height: 150px;
+        display: grid;
+        grid-gap:15px;
+        grid-template-columns: auto auto auto;
+    }
+
+    .logo{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+        display: block;
+        transform: translateX(80%);
+    }
+
+    .logo img{
+        width: 200px;
+    }
+
+    #flexItems{
+        width: 0;
+        height: 300px;
+        background: rgba(0,  0, 0, 0.9);
+        position: absolute;
+        top:150px;
+        margin: 0;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    nav{
+        font-family: var(--ff-ubu);
+    }
+
+    nav li,
+    .socialLinks i{
+        display:block;
+        margin-top: 10px;
+        font-size: 30px;
+        font-weight: 700;
+    }
+    
+
+    .join{
+    transform: translateX(-15%) translateY(20%);
+    }
+
+    #menuBar{
+        display: block;
+        position: absolute;
+        right: 0;
+        z-index: 10;
+    }
+
+    .background-slides{
+        width: 600px;
+        margin: 0;
+    }
+
+    .slides img{
+        vertical-align: middle;
+        height: 500px;
+    }
+
+    .main-view{
+        max-width: 600px;
+        height: 500px;
+    }
+
+    .main-view >div{
+        margin: auto;
+    }
+
+    .text-center{
+        line-height: 0.5;
+    }
+    
+    .text-center h1{
+        font-size: 20px;
+    }
+    
+    .text-center p{
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    #viewInput{
+        display: none;
+    }
+
+    #viewBars {
+        display: grid;
+    }
+
+    #viewBars .btn-class::before{
+        content: "";
+        width: 300px;
+        height: 40px;
+        background: rgba(15, 15, 15, 0.5) ;
+        position: absolute;
+        left: -110px;
+    }
+
+
+    #viewBars a{
+        font-size: 20px;
+        text-decoration:none;
+        transition: 5s;
+        animation: class 3s ;
+    }
+
+    
+
+    a.btn-class:hover{
+        background: none;
+        color: #fff;
+        font-size: 30px;
+    }
+
+    
+
+
+    
+
+    
+        
+}

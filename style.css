@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,600&family=Roboto:wght@300;400;500;700;900&family=Source+Sans+Pro:wght@300;400;600;700;900&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --primary:#111111;
+    --secondary:#607d8b;
+    --light:#fff;
+    --blue:#042861;
+    --gold: #fad119;
+    --danger:#ff0000;
+    --go:hsl(113, 100%, 50%);
+    --gogo:#051806;
+    --ff-pro: 'Poppins', 'Roboto', sans-serif;
+    --ff-ssp: 'Source Sans Pro', sans-serif;
+    --ff-ubu: 'Ubuntu', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding:0;
+    background: rgba(0, 0, 0, 0.5) url(/images/bg.jpg) no-repeat ;
+    background-size: cover;
+}
+
+header{
+    width: 100%;
+}
+
+section{
+    width: 100%;
+}
+
+.container{
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+ul{
+    list-style:none;
+}
+
+a{
+    text-decoration: none;
+    color:var(--light);
+}
+
+i{
+    color: var(--light);
+    cursor: pointer;
+}
+
+textarea{
+    resize:none;
+}
+
+/* Navigation */
+.navigation{
+    display:flex;
+    justify-content: space-around;
+    margin: auto auto;
+    background: var(--primary);
+    height: 75px;
+    width: inherit;
+    font-family: var(--ff-pro);
+}
+
+.logo{
+    width: 200px;
+    margin: 15px;
+    display: flex;
+}
+
+.logo img{
+    width: 100px;
+}
+
+.logo span {
+    margin-top: 10px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.flexitems{
+    display: flex;
+}
+
+nav{
+    margin: 10px;
+}
+
+nav li{
+    display: inline;
+    margin-right:10px;
+    text-transform: uppercase;
+}
+
+nav a:hover{
+    color: var(--blue);
+}
+
+nav .active{
+    color: var(--danger);
+}
+
+
+.socialLinks {
+    margin:25px
+}
+.socialLinks i{
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.join{
+    margin: 20px;
+    width: 250px;
+    display: flex;
+    justify-content:center;
+    gap: 5px;
+    color: var(--gold-color);
+}
+
+.join i{
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.join input{
+    width: 250px;
+    height:40px ;
+    padding: 10px;
+    font-size: 16px;
+    background: var(--opaquered);
+    background-blend-mode: difference;
+    outline: none;
+    border-radius: 5px;
+    color: var(--light);
+}
+
+.join input::placeholder{
+    padding: 10px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+#menuBar{
+    margin: 20px;
+    font-size: 32px;
+    display: inline-block;
+    cursor: pointer;
+    display: none;
+}
+
+.bar1, .bar2, .bar3{
+    width: 35px;
+    height: 5px;
+    background-color: var(--light);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1{
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.change .bar2{
+    opacity: 0;
+}
+
+.change .bar3{
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+/* Menubar ends here */
+/* Background slides */
+.background-slides{
+    position: relative;
+    width: 1366px;
+    height: 500px;
+    margin: auto;
+}
+
+.slides{
+    display: none;
+}
+
+.slides img{
+    vertical-align: middle;
+    height: 500px;
+}
+
+/* Main View */
+.main-view{
+    width: 1366px;
+    height: 500px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    padding: 30px;
+    color:var(--light);
+    background: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    font-family: var(--ff-ubu);
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+
+.main-view >div{
+    margin: 30px;
+}
+
+#viewHead{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.text-center{
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 0.2;
+}
+
+.text-center h1{
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.text-center p{
+    font-weight: 400;
+}
+
+#viewInput{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+}
+
+#viewInput input[type="search"]{
+    width: 600px;
+    padding: 20px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+}
+
+#viewInput input[type="submit"]{
+    padding:20px;
+    width: 150px;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    background: var(--gold);
+    color: var(--light);
+    outline: none;
+}
+
+#viewInput input::placeholder{
+    font-size: 16px; 
+}
+
+#viewBars{
+    transform:translateX(25%) translateY(-5%);
+}
+
+#viewBars a{
+    margin-right: 20px;
+    text-decoration: underline;
+}
+
+.btn{
+    width: 150px;
+    padding: 20px;
+    
+}
+
+.btn-class{
+    text-transform: capitalize;
+    border-radius: 5px;
+}
+
+.btn-class:hover{
+    background: var(--gogo);
+    color: var(--danger);
+}
+
+.btn-ex{
+    transform: scale(1);
+}
+
+/* Second main view */
+.second-mainview{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--gold);
+    min-height: 700px;
+}
+
+.leagueofwriters{
+    width: 800px;
+    background: var(--primary);
+    margin-top:10px;
+    padding: 20px;
+    color:var(--gold);
+}
+
+.images img{
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+    z-index: 50;
+    box-shadow: 0px 0px 2px 3px var(--light);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+#images1{
+    transform: rotate(-10deg) translateY(5%);
+}
+
+#images2{
+    transform: rotate(-10deg) translateX(-15%);
+}
+
+#images3{
+    transform: rotate(-5deg);
+}
+
+#images4{
+    transform: rotate(-10deg);
+}
+
+.leagueofwriters .text{
+    text-align: center;
+    margin: 0 50px;
+    line-height:1;
+}
+
+.text h1{
+    font-size: 28px;
+    font-weight: 700;
+    text-transform:capitalize;
+}
+
+.text p{
+    font-size:16px;
+}
+.text p::first-letter{
+    font-weight: 900;
+    font-size:20px;
+    width: 20px;
+    height: 20px;
+}
+
+.leagueofartis{
+    width: 250px;
+    height: 500px;
+    display: grid;
+    grid-gap:5px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+
+.face img{
+    width: 200px;
+    height: 150px;
+}
+
+.btn-art{
+    width:200px ;
+    background:rgba(0, 0, 0, 0.2);
+    display: block;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+.btn-art:hover{
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.leagueoffloral{
+    width: 250px;
+    margin-top: 20px;
+    height: 500px; 
+}
+
+#imageBx{
+    width: 200px;
+    min-height: 490px;
+    background: url('/images/art1.jpg') no-repeat center top;
+    background-size: cover;
+}
+
+
+
+
